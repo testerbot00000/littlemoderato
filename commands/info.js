@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
       .addField("Invite Bot", "http://bit.do/modinvite")
       .addField("code", "Code Created by Lime # 1224")
       .addField("Thanks", "Kick User Example + kick @mention <Reason>")
-      .addField("ban", 'Thanks to Heroku for a Free Host")
+      .addField("ban", "Thanks to Heroku for a Free Host")
       .setFooter(`Little Moderator ", `${message.author.displayAvatarURL}`)
       
 
