@@ -12,6 +12,7 @@ module.exports.run = async (bot, message, args) => {
           .addField('clean', 'Clear Chat From 2 Post To 200')
           .addField('kick', 'Kick User Example + kick @mention <Reason>')
           .addField('ban', 'Ban User + ban @mention <Reason>')
+          .addField('Info','Get Inforamtion')
           .setFooter(`Little Moderator Help`, `${message.author.displayAvatarURL}`)
           
       
