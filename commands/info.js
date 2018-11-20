@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
       const embed = new Discord.RichEmbed()
       
       .setColor("#E74C3C")
-      .setTitle("All Commands")
+      .setTitle("Info")
       .addField("Bot Owner", "Lime#1224 Tag and Nick Owner Unchanged")
       .addField("Support Server", "http://bit.do/modsupport")
       .addField("Invite Bot", "http://bit.do/modinvite")
@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
       .setFooter("Little Moderator ", `${message.author.displayAvatarURL}`)
       
 
-      message.author.send({embed});
+      message.author.channel({embed});
 }
 module.exports.help = {
     name: "info"
