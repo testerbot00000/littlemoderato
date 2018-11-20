@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
       .addField("code", "Code Created by Lime # 1224")
       .addField("Thanks", "Kick User Example + kick @mention <Reason>")
       .addField("ban", "Thanks to Heroku for a Free Host")
-      .setFooter(`Little Moderator ", `${message.author.displayAvatarURL}`)
+      .setFooter("Little Moderator ", `${message.author.displayAvatarURL}`)
       
 
       message.author.send({embed});
