@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    
+          return message.reply(":postbox: | **Check PM** ");
       const embed = new Discord.RichEmbed()
       
           .setColor('#E74C3C')
