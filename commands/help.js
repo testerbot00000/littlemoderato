@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-          return message.reply(":postbox: | **Check PM** ");
+         
       const embed = new Discord.RichEmbed()
       
           .setColor('#E74C3C')
@@ -15,7 +15,8 @@ module.exports.run = async (bot, message, args) => {
           .setFooter(`Little Moderator Help`, `${message.author.displayAvatarURL}`)
           
       
-          message.author.send({embed});
+          message.author.send({embed})
+return message.reply(":postbox: | **Check PM** ");
       }
 module.exports.help = {
     name: "help"
