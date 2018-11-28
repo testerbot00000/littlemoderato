@@ -37,22 +37,8 @@ bot.on('message', async message => {
 bot.on('ready', () => {
     bot.user.setPresence({
         game:{
-            name:`${bot.guilds.size} Servers | mod!help`,
+            name:`mod!help`,
             type:"",
             url:""
         }
     });  
-  bot.on("guildCreate", guild => {
-     game:{
-            name:`${bot.guilds.size} Servers | mod!help`,
-            type:"",
-            url:""
-        }
-     }); 
-  bot.on("guildDelete", guild => {
-      game:{
-            name:`${bot.guilds.size} Servers | mod!help`,
-            type:"",
-            url:""
-        }
-});
