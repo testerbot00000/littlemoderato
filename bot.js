@@ -34,11 +34,3 @@ bot.on('message', async message => {
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     if(commandfile) commandfile.run(bot,message,args);
 });
-bot.on('ready', () => {
-    bot.user.setPresence({
-        game:{
-            name:`mod!help`,
-            type:"",
-            url:""
-        }
-    });  
