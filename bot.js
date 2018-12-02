@@ -34,3 +34,33 @@ bot.on('message', async message => {
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     if(commandfile) commandfile.run(bot,message,args);
 });
+bot.on('ready', () => {
+    bot.user.setStatus('available')
+    bot.user.setPresence({
+        game: {
+            name: `${bot.guilds.size} Guilds! |${bot.users.size } Users | mod!help | bit.ly/ltmd-s `,
+            type: "STREAMING",
+            url: "https://www.twitch.tv/monstercat"
+        }
+    });
+});
+bot.on("guildCreate", guild => {
+    bot.user.setStatus('available')
+    bot.user.setPresence({
+        game: {
+            name: `${bot.guilds.size} Guilds! |${bot.users.size } Users | mod!help | bit.ly/ltmd-s`,
+            type: "STREAMING",
+            url: "https://www.twitch.tv/monstercat"
+        }
+    });
+   });
+   bot.on("guildDelete", guild => {
+   bot.user.setStatus('available')
+    bot.user.setPresence({
+        game: {
+            name: `${bot.guilds.size} Guilds! |${bot.users.size } Users | mod!help | bit.ly/ltmd-s`,
+            type: "STREAMING",
+            url: "https://www.twitch.tv/monstercat"
+        }
+    });
+});
