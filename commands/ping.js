@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     m.edit(`PO--`);
     m.edit(`PONN-`);
     m.edit(`PONG`);
-    m.edit(`Пинг **${Math.round(bot.ping)}** мс`)
+    m.edit(`Ping **${Math.round(bot.ping)}** ms`)
       }
 module.exports.help = {
     name: "ping"
