@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     let aurl = message.mentions.users.first() || message.author;
     let avEMB = new Discord.RichEmbed()
     .setColor('#32CD32')
-    .setTitle(`Аватар Указаного Пользователя ${aurl.username}`)
+    .setTitle(`Avatar of this user ${aurl.username}`)
     .setImage(aurl.displayAvatarURL);
  message.channel.send(avEMB)
       }
