@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    const m = await message.channel.send("Измерение");
+    const m = await message.channel.send("Metering");
     m.edit('Ping');
     m.edit(`P---`);
     m.edit(`PO--`);
