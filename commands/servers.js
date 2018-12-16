@@ -5,5 +5,5 @@ bot.guilds.map(m => ${m.name} [${m.id}]).join('\n\n');
 
       }
 module.exports.help = {
-    name: ""
+    name: "servers"
 }
