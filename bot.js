@@ -39,7 +39,7 @@ var answers = [
                 url:"https://www.twitch.tv/monstercat"
             }
         });
-          }, 2 * 1000);
+          }, 5 * 1000);
       console.log('Я готов')
     });
 bot.login(process.env.BOT_TOKEN);
