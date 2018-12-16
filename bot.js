@@ -35,7 +35,7 @@ var answers = [
         bot.user.setPresence({
             game:{
                 name:`${randomAnswer}`,
-                type:"WATCHING",
+                type:"STREAMING",
                 url:"https://www.twitch.tv/monstercat"
             }
         });
