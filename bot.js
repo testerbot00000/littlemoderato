@@ -21,7 +21,27 @@ fs.readdir("./commands", (err, files) => {
     });
 
 });
+var answers = [
+    `Little Moderator`,
+    `${bot.guilds.size} Guilds`,
+    `${bot.users.size } Users `,
+    `mod!help`,
+    `bit.ly/litllemod-invite`
+  ] 
 
+  bot.on('ready', () => {
+    let interval = setInterval (function () {
+        var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+        bot.user.setPresence({
+            game:{
+                name:`${randomAnswer}`,
+                type:"WATCHING",
+                url:"https://www.twitch.tv/monstercat"
+            }
+        });
+          }, 2 * 1000);
+      console.log('Я готов')
+    });
 bot.login(process.env.BOT_TOKEN);
 
 
@@ -33,34 +53,4 @@ bot.on('message', async message => {
     let args = messageArray.slice(1);
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     if(commandfile) commandfile.run(bot,message,args);
-});
-bot.on('ready', () => {
-    bot.user.setStatus('available')
-    bot.user.setPresence({
-        game: {
-            name: `${bot.guilds.size} Guilds! |${bot.users.size } Users | mod!help | bit.ly/ltmd-s `,
-            type: "STREAMING",
-            url: "https://www.twitch.tv/monstercat"
-        }
-    });
-});
-bot.on("guildCreate", guild => {
-    bot.user.setStatus('available')
-    bot.user.setPresence({
-        game: {
-            name: `${bot.guilds.size} Guilds! |${bot.users.size } Users | mod!help | bit.ly/ltmd-s`,
-            type: "STREAMING",
-            url: "https://www.twitch.tv/monstercat"
-        }
-    });
-   });
-   bot.on("guildDelete", guild => {
-   bot.user.setStatus('available')
-    bot.user.setPresence({
-        game: {
-            name: `${bot.guilds.size} Guilds! |${bot.users.size } Users | mod!help | bit.ly/ltmd-s`,
-            type: "STREAMING",
-            url: "https://www.twitch.tv/monstercat"
-        }
-    });
 });
