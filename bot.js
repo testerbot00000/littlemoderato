@@ -23,8 +23,6 @@ fs.readdir("./commands", (err, files) => {
 });
 var answers = [
     `Little Moderator`,
-    `${bot.guilds.size} Guilds`,
-    `${bot.users.size } Users `,
     `mod!help`,
     `bit.ly/litllemod-invite`
   ] 
