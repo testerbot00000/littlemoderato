@@ -24,7 +24,8 @@ fs.readdir("./commands", (err, files) => {
 var answers = [
     `Little Moderator`,
     `mod!help`,
-    `bit.ly/litllemod-invite`
+    `bit.ly/litllemod-invite`,
+    `/bit.ly/mod-support`
   ] 
 
   bot.on('ready', () => {
