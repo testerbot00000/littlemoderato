@@ -17,6 +17,8 @@ module.exports.run = async (bot, message, args) => {
     .addField('ping', 'show current ping')
     .addField('say', 'Say from the name of the bot')
     .addField('avatar', 'Get User Avatar')
+    .addField('mute', 'Forbid the User to Send Messages')
+    .addField('unmute', 'Allow User to send messages')
     .setFooter('Little Moderator');
     
     message.channel.send({embed})
