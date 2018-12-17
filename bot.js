@@ -25,7 +25,7 @@ var answers = [
     `Little Moderator`,
     `mod!help`,
     `bit.ly/litllemod-invite`,
-    `/bit.ly/mod-support`
+    `bit.ly/mod-support`
   ] 
 
   bot.on('ready', () => {
@@ -38,7 +38,7 @@ var answers = [
                 url:"https://www.twitch.tv/monstercat"
             }
         });
-          }, 5 * 1000);
+          }, 3 * 1000);
       console.log('Я готов')
     });
 bot.login(process.env.BOT_TOKEN);
