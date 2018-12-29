@@ -43,13 +43,24 @@ var answers = [
     });
 bot.login(process.env.BOT_TOKEN);
 
-
 bot.on('message', async message => {
-    if(message.author.bot) return;
     let prefix = 'mod!';
+    if(message.author.bot) return;
+    if(!message.content.startsWith(prefix)) return;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     if(commandfile) commandfile.run(bot,message,args);
 });
+bot.on('messageUpdate', async (oldMessage, message) => {
+  let prefix = 'mod!';
+  if(message.author.bot) return;
+  if(!message.content.startsWith(prefix)) return;
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+  let commandfile = bot.commands.get(cmd.slice(prefix.length));
+  if(commandfile) commandfile.run(bot,message,args);
+  });
+
