@@ -7,7 +7,7 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You can
 let dMessage = args.join(" ").slice(22);
 if(dMessage.length < 1) return message.reply('You must supply a message!')
 
-dUser.send(`${dUser} sent you: ${dMessage}`)
+dUser.send(`You have received a message from [CF] Central Force: ${dMessage}`)
 
 message.author.send(`${message.author} You have sent your message to ${dUser}`)
 
