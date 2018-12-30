@@ -53,7 +53,7 @@ bot.on('message', async message => {
     if(commandfile) commandfile.run(bot,message,args);
 });
 bot.on('messageUpdate', async (oldMessage, message) => {
-  let prefix = 'mod!';
+  let prefix = '+';
   if(message.author.bot) return;
   if(!message.content.startsWith(prefix)) return;
   let messageArray = message.content.split(" ");
