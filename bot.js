@@ -22,11 +22,10 @@ fs.readdir("./commands", (err, files) => {
 
 });
 var answers = [
-    `Little Moderator`,
-    `mod!help`,
-    `bit.ly/litllemod-invite`,
-    `bit.ly/mod-support`
-  ] 
+    `Patron Support`,
+    `https://patreon.com/LegacyYT`
+    
+ ] 
 
   bot.on('ready', () => {
     let interval = setInterval (function () {
@@ -34,8 +33,8 @@ var answers = [
         bot.user.setPresence({
             game:{
                 name:`${randomAnswer}`,
-                type:"STREAMING",
-                url:"https://www.twitch.tv/monstercat"
+                type:"WATCHING",
+                url:"https://patreon.com/LegacyYT"
             }
         });
           }, 3 * 1000);
@@ -44,7 +43,7 @@ var answers = [
 bot.login(process.env.TOKEN);
 
 bot.on('message', async message => {
-    let prefix = 'mod!';
+    let prefix = '+';
     if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
     let messageArray = message.content.split(" ");
