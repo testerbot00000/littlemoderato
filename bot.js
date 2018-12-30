@@ -10,13 +10,13 @@ fs.readdir("./commands", (err, files) => {
 
     let jsfile = files.filter(f => f.split(".").pop() === "js")
     if(jsfile.length <= 0){
-        console.log("Не могу найти команды!");
+        console.log("null");
         return;
     }
 
     jsfile.forEach((f, i) =>{
     let props = require(`./commands/${f}`);
-    console.log(`${f} Команда Загружена`);
+    console.log(`${f} null`);
     bot.commands.set(props.help.name, props);
     });
 
@@ -33,13 +33,13 @@ var answers = [
         var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
         bot.user.setPresence({
             game:{
-                name:`${randomAnswer}`,
-                type:"STREAMING",
-                url:"https://www.twitch.tv/monstercat"
+                name:`Patrons`,
+                type:"WATCHING",
+                url:"https://patreon.com/LegacyYT"
             }
         });
           }, 3 * 1000);
-      console.log('Я готов')
+      console.log('Null')
     });
 bot.login(process.env.BOT_TOKEN);
 
@@ -54,7 +54,7 @@ bot.on('message', async message => {
     if(commandfile) commandfile.run(bot,message,args);
 });
 bot.on('messageUpdate', async (oldMessage, message) => {
-  let prefix = 'mod!';
+  let prefix = '+';
   if(message.author.bot) return;
   if(!message.content.startsWith(prefix)) return;
   let messageArray = message.content.split(" ");
