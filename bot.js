@@ -33,7 +33,7 @@ var answers = [
         bot.user.setPresence({
             game:{
                 name:`${randomAnswer}`,
-                type:"STREAMING",
+                type:"PLAYING",
                 url:"https://patreon.com/LegacyYT"
             }
         });
