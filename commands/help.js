@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     .setAuthor('Bot Prefix [ +help ]')
     .setTitle('All Commands')
     .addField('ban', 'ban @user <reason>')
-    .addField('clean', 'Prunes 2 to 1000 messages')
+    .addField('clean', 'Prunes 2 to 200 messages')
     .addField('dm', 'dm @user <text>')
     .addField('info', 'Get Usage Statistics')
     .addField('kick', 'kick @user <reason>')
