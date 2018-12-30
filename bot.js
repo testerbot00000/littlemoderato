@@ -23,7 +23,8 @@ fs.readdir("./commands", (err, files) => {
 });
 var answers = [
     `Donate for perks!`,
-    `https://patreon.com/LegacyYT`
+    `https://patreon.com/LegacyYT`,
+    `Patron Support Service`
     
  ] 
 
