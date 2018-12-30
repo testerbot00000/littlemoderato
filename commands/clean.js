@@ -11,5 +11,5 @@ module.exports.run = async (bot, message, args) => {
       .catch(error => message.reply(`Failed to delete messages due to:${error}`));
       }
 module.exports.help = {
-    name: "clean", "prune"
+    name: "clean"
 }
