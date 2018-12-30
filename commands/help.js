@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 
     const embed = new Discord.RichEmbed()
     .setColor('#F1C40F')
-    .setAuthor('Bot Prefix [ mod! ]')
+    .setAuthor('Bot Prefix [ +help ]')
     .setTitle('All Commands')
     .addField('ban', 'ban <@mention> <reason>')
     .addField('clean', 'clean <2> - <200>')
