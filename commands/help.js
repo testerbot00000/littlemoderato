@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     .addField('ping', 'show current ping')
     .addField('say', 'Say from the name of the bot')
     .addField('avatar', 'Get User Avatar')
-    .setFooter('Little Moderator');
+    .setFooter('Patron Support');
     
     message.channel.send({embed})
     
