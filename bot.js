@@ -24,7 +24,8 @@ fs.readdir("./commands", (err, files) => {
 var answers = [
     `Donate for perks!`,
     `https://patreon.com/LegacyYT`,
-    `Patron Support Service`
+    `Patron Support Service`,
+    `Happy New Year!`
     
  ] 
 
