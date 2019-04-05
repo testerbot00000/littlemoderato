@@ -22,10 +22,10 @@ fs.readdir("./commands", (err, files) => {
 
 });
 var answers = [
-    `Donate for perks!`,
+    `Desert Force Support Service`,
     `https://patreon.com/LegacyYT`,
-    `Patron Support Service`,
-    `Happy New Year!`
+    `Patron Support Service`
+    
     
  ] 
 
